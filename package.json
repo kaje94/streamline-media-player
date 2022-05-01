@@ -22,7 +22,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --watchAll=false",
+    "test": "react-scripts test --watchAll=false  --passWithNoTests",
     "test:coverage": "npm test -- --coverage",
     "test:watch": "react-scripts test",
     "eject": "react-scripts eject",
