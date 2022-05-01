@@ -13,15 +13,18 @@ export type Props = {
 /** Like and unlike button component */
 const LikeUnlikeButtons: React.FC<Props> = memo(({ videoId }) => {
   const [isButtonPressed, setButtonPressed] = useState(false);
+
   useEffect(() => {
     if (videoId) {
       setButtonPressed(false);
     }
   }, [videoId]);
+
   const onButtonPressed = useCallback(
     () => setButtonPressed(true),
     [setButtonPressed]
   );
+
   return (
     <div className={styles.LikeUnlikeWrap}>
       <LikeButton

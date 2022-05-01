@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-import React, { memo, useEffect, useState } from "react";
+import React, { memo, useCallback, useEffect, useState } from "react";
 import { Animated } from "react-animated-css";
 import { likeSvg } from "assets/images";
 import clsx from "clsx";
@@ -25,11 +25,20 @@ export type Props = {
 const LikeButton: React.FC<Props> = memo(
   ({ isLike = true, isVisible = true, videoId, onClick }) => {
     const [buttonPressed, setButtonPressed] = useState(false);
+
     useEffect(() => {
       if (videoId) {
         setButtonPressed(false);
       }
     }, [videoId]);
+
+    const onLikeButtonClick = useCallback(() => {
+      setButtonPressed(true);
+      if (onClick) {
+        onClick();
+      }
+    }, [onClick]);
+
     return (
       <AnimatedWrap
         animationIn="fadeIn"
@@ -44,12 +53,7 @@ const LikeButton: React.FC<Props> = memo(
             styles.LikeUnlikeButton,
             isLike ? styles.LikeButton : styles.UnlikeButton
           )}
-          onClick={() => {
-            setButtonPressed(true);
-            if (onClick) {
-              onClick();
-            }
-          }}
+          onClick={onLikeButtonClick}
         />
       </AnimatedWrap>
     );
