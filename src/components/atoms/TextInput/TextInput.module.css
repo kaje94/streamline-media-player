@@ -1,0 +1,27 @@
+.Input {
+  font-size: var(--standard-font-size);
+  line-height: 40px;
+  letter-spacing: 0.4px;
+  user-select: none;
+  border: 1px solid transparent;
+  background-color: var(--primary-extra-light-color);
+  color: var(--primary-extra-dark-color);
+  position: relative;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: var(--standard-border-radius);
+  transition: all 1s;
+  width: 100%;
+}
+
+.Input:disabled {
+  background-color: var(--primary-light-color);
+  color: var(--primary-light-color);
+  cursor: not-allowed !important;
+}
+
+.Input:enabled:hover,
+.Input:enabled:focus {
+  outline: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.2);
+}

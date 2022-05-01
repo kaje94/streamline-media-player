@@ -1,0 +1,8 @@
+.SearchBar {
+  display: flex;
+  align-items: center;
+}
+
+.Divider {
+  width: 5px;
+}

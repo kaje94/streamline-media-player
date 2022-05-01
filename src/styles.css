@@ -1,0 +1,28 @@
+.App {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+
+  --background-color: #eceff1;
+
+  --primary-extra-light-color: #cfd8dc;
+  --primary-light-color: #90a4ae;
+  --primary-color: #455a64;
+  --primary-dark-color: #37474f;
+  --primary-extra-dark-color: #263238;
+
+  --standard-font-size: 0.7;
+  --standard-border-radius: 10px;
+}
+
+body {
+  margin: 0;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

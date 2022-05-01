@@ -1,0 +1,12 @@
+.LikeUnlikeWrap {
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+@media only screen and (max-width: 480px) {
+  .LikeUnlikeWrap {
+    margin-top: 10px;
+  }
+}
